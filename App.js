@@ -1,5 +1,5 @@
 import "react-native-gesture-handler";
-import { NavigationContainer } from "@react-navigation/native";
+import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { View, StyleSheet, Text, Pressable } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -14,9 +14,16 @@ import Settings from "./screens/Settings";
 const Tab = createBottomTabNavigator();
 
 export default function App() {
+  const MyTheme = {
+    ...DefaultTheme,
+    colors: {
+      ...DefaultTheme.colors,
+      background: COLORS.appBackground,
+    },
+  };
   return (
     <>
-      <NavigationContainer>
+      <NavigationContainer theme={MyTheme}>
         <Tab.Navigator
           screenOptions={{
             tabBarStyle: { backgroundColor: COLORS.appBackground },

@@ -17,10 +17,11 @@ function AllWords({ route, navigation }) {
 
   useEffect(() => {
     const wordDataAdd = route.params?.wordDataAdd;
+
     if (wordDataAdd) {
       setMyWords((prev) => [...prev, wordDataAdd]);
-      return;
     }
+
     const wordDataEdit = route.params?.wordDataEdit;
     if (wordDataEdit) {
       setMyWords((prev) =>

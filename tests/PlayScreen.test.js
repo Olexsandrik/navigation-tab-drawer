@@ -1,9 +1,4 @@
-import {
-  render,
-  screen,
-  userEvent,
-  act,
-} from "@testing-library/react-native";
+import { render, screen, userEvent, act } from "@testing-library/react-native";
 import Play from "../screens/Learning/Play";
 import MyWords from "./testData.js";
 
