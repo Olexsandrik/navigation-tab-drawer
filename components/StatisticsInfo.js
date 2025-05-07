@@ -2,6 +2,7 @@ import React from "react";
 import { View, StyleSheet, Text, StatusBar, Pressable } from "react-native";
 
 import InfoCard from "./InfoCard";
+import ImagePile from "./ImagePile";
 
 function StatisticsInfo() {
   return (

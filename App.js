@@ -52,6 +52,7 @@ export default function App() {
             name="Learning"
             component={LearningNavigation}
             options={{
+              headerShown: false,
               tabBarLabel: "Learning",
               tabBarIcon: ({ color, size }) => {
                 return (
