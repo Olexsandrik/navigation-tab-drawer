@@ -1,6 +1,6 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import Statistic from "../components/StatisticsInfo";
-import InfoCard from "../components/InfoCard";
+import Statistics from "../screens/Learning/Statistics";
+import Play from "../screens/Learning/Play";
 import { COLORS } from "../constants";
 
 const Drawer = createDrawerNavigator();
@@ -11,17 +11,17 @@ function LearningNavigation() {
         drawerActiveTintColor: COLORS.primary100,
         drawerActiveBackgroundColor: COLORS.primary300,
         drawerStyle: {
-          backgroundColor: COLORS.primary200r,
+          backgroundColor: COLORS.primary200,
         },
         drawerInactiveTintColor: COLORS.fontMain,
         headerStyle: {
           backgroundColor: COLORS.appBackground,
         },
-        headerTintColor: COLORS.fontMain,
+        headerTintColor: COLORS.primary900,
       }}
     >
-      <Drawer.Screen name="Statistic" component={Statistic} />
-      <Drawer.Screen name="Play" component={InfoCard} />
+      <Drawer.Screen name="Statistic" component={Statistics} />
+      <Drawer.Screen name="Play" component={Play} />
     </Drawer.Navigator>
   );
 }
